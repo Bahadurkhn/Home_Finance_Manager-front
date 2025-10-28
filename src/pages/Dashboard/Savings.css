@@ -1,0 +1,322 @@
+.savings-page {
+  padding: 1rem 0;
+}
+
+.savings-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.savings-header h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.savings-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+}
+
+/* Savings Overview */
+.savings-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.savings-goal-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.goal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.goal-icon {
+  color: #667eea;
+}
+
+.goal-header h3 {
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.goal-header p {
+  color: #666;
+  margin: 0;
+}
+
+.goal-input-section {
+  display: flex;
+  gap: 1rem;
+  align-items: end;
+}
+
+.input-group {
+  position: relative;
+  flex: 1;
+}
+
+.currency-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.update-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.update-btn:hover {
+  background: #764ba2;
+}
+
+.savings-progress-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.progress-icon {
+  color: #4ECDC4;
+}
+
+.progress-header h3 {
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.progress-header p {
+  color: #666;
+  margin: 0;
+}
+
+.progress-visualization {
+  margin-bottom: 2rem;
+}
+
+.progress-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.detail span:first-child {
+  color: #666;
+  font-weight: 500;
+}
+
+.detail .amount {
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Savings Insights */
+.savings-insights {
+  margin-bottom: 2rem;
+}
+
+.insights-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.insights-card h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.insight-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.insight-item:hover {
+  transform: translateY(-2px);
+}
+
+.insight-icon {
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+.insight-item .label {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.insight-item .value {
+  display: block;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Savings Tips */
+.savings-tips {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.savings-tips h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip-card {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.tip-icon {
+  flex-shrink: 0;
+}
+
+.tip-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.tip-card p {
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .savings-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .goal-input-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .update-btn {
+    width: 100%;
+  }
+  
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .savings-header h1 {
+    font-size: 2rem;
+  }
+  
+  .savings-goal-card,
+  .savings-progress-card,
+  .insights-card,
+  .savings-tips {
+    padding: 1.5rem;
+  }
+  
+  .progress-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
