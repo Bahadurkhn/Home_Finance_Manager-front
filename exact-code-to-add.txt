@@ -1,0 +1,36 @@
+﻿EXACT CODE TO COPY-PASTE INTO AuthContext.jsx:
+
+IN LOGIN FUNCTION:
+==================
+Find this section in the login function:
+
+localStorage.setItem('financeUser', JSON.stringify(data));
+setUser(data);
+setIsAdmin(data.role === 'admin');
+
+Add this line RIGHT AFTER:
+
+if (window.notifyUserLogin) window.notifyUserLogin(data);
+
+IN LOGOUT FUNCTION:
+===================
+Find this logout function:
+
+const logout = () => {
+  localStorage.removeItem('financeToken');
+  localStorage.removeItem('financeUser');
+  setUser(null);
+  setToken(null);
+  setIsAdmin(false);
+};
+
+Change it to:
+
+const logout = () => {
+  if (user && window.notifyUserLogout) window.notifyUserLogout(user);
+  localStorage.removeItem('financeToken');
+  localStorage.removeItem('financeUser');
+  setUser(null);
+  setToken(null);
+  setIsAdmin(false);
+};
