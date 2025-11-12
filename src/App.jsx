@@ -33,7 +33,7 @@
 // function ProtectedRoute({ children, adminOnly = false }) {
 //   const { user, isAdmin } = useAuth()
   
-//   if (!user) {
+//   if (!user && !window.location.pathname.includes("/signup")) {
 //     return <Navigate to="/login" />
 //   }
   
@@ -148,7 +148,7 @@ import AdminUsers from './components/admin/AdminUsers'
 function ProtectedRoute({ children, adminOnly = false }) {
   const { user, isAdmin } = useAuth()
   
-  if (!user) {
+  if (!user && !window.location.pathname.includes("/signup")) {
     return <Navigate to="/login" />
   }
   
@@ -173,6 +173,7 @@ function App() {
   return (
     <AuthProvider>
       <FinanceProvider>
+        
         <Router>
           <div className="App">
             <Routes>
@@ -242,9 +243,12 @@ function App() {
               } />
             </Routes>
           </div>
+          
         </Router>
       </FinanceProvider>
+  
     </AuthProvider>
+    
   )
 }
 

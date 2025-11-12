@@ -140,8 +140,8 @@ const AdminPanel = () => {
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                         <td>
-                          <span className={`role-badge ${user.role}`}>
-                            {user.role}
+                          <span className={`role-badge ${user?.role}`}>
+                            {user?.role}
                           </span>
                         </td>
                         <td>

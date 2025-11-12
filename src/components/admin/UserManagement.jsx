@@ -197,7 +197,7 @@ const UserManagement = () => {
                       width: '40px', 
                       height: '40px', 
                       borderRadius: '50%', 
-                      background: user.role === 'admin' ? '#dc3545' : '#28a745',
+                      background: user?.role === 'admin' ? '#dc3545' : '#28a745',
                       color: 'white',
                       display: 'flex',
                       alignItems: 'center',
@@ -238,7 +238,7 @@ const UserManagement = () => {
                       borderRadius: '20px',
                       fontSize: '12px',
                       fontWeight: 'bold',
-                      background: user.role === 'admin' ? '#dc3545' : '#28a745',
+                      background: user?.role === 'admin' ? '#dc3545' : '#28a745',
                       color: 'white',
                       display: 'inline-block',
                       minWidth: '80px',
@@ -246,14 +246,14 @@ const UserManagement = () => {
                       boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
                     }}
                   >
-                    {user.role ? user.role.toUpperCase() : 'USER'}
+                    {user?.role ? user?.role.toUpperCase() : 'USER'}
                   </span>
                 </td>
                 <td style={{ padding: '12px', fontSize: '14px', color: '#666' }}>
                   {user.createdAt ? new Date(user.createdAt).toLocaleDateString() : 'N/A'}
                 </td>
                 <td style={{ padding: '12px' }}>
-                  {user.role !== 'admin' && (
+                  {user?.role !== 'admin' && (
                     <button
                       onClick={() => handlePromote(user._id || user.id)}
                       style={{
@@ -274,7 +274,7 @@ const UserManagement = () => {
                       ⬆️ Make Admin
                     </button>
                   )}
-                  {user.role === 'admin' && user.email !== currentUser?.email && (
+                  {user?.role === 'admin' && user.email !== currentUser?.email && (
                     <span style={{ 
                       color: '#dc3545', 
                       fontSize: '12px', 

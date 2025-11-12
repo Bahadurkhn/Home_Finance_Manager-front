@@ -75,13 +75,13 @@
 //           </div>
 //           <div style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', color: 'white', padding: '20px', borderRadius: '12px', textAlign: 'center' }}>
 //             <div style={{ fontSize: '32px', fontWeight: 'bold' }}>
-//               {users.filter(u => u.role === 'admin').length}
+//               {users.filter(u => u?.role === 'admin').length}
 //             </div>
 //             <div>Admin Users</div>
 //           </div>
 //           <div style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', color: 'white', padding: '20px', borderRadius: '12px', textAlign: 'center' }}>
 //             <div style={{ fontSize: '32px', fontWeight: 'bold' }}>
-//               {users.filter(u => u.role === 'user').length}
+//               {users.filter(u => u?.role === 'user').length}
 //             </div>
 //             <div>Regular Users</div>
 //           </div>
@@ -145,7 +145,7 @@
 //                           width: '44px', 
 //                           height: '44px', 
 //                           borderRadius: '50%', 
-//                           background: user.role === 'admin' ? '#e74c3c' : '#2ecc71',
+//                           background: user?.role === 'admin' ? '#e74c3c' : '#2ecc71',
 //                           color: 'white',
 //                           display: 'flex',
 //                           alignItems: 'center',
@@ -178,14 +178,14 @@
 //                           borderRadius: '20px',
 //                           fontSize: '12px',
 //                           fontWeight: 'bold',
-//                           background: user.role === 'admin' ? '#e74c3c' : '#2ecc71',
+//                           background: user?.role === 'admin' ? '#e74c3c' : '#2ecc71',
 //                           color: 'white',
 //                           display: 'inline-block',
 //                           minWidth: '80px',
 //                           textAlign: 'center'
 //                         }}
 //                       >
-//                         {user.role ? user.role.toUpperCase() : 'USER'}
+//                         {user?.role ? user?.role.toUpperCase() : 'USER'}
 //                       </span>
 //                     </td>
 //                     <td style={{ padding: '16px', fontSize: '14px', color: '#7f8c8d' }}>
@@ -196,7 +196,7 @@
 //                       }) : 'N/A'}
 //                     </td>
 //                     <td style={{ padding: '16px' }}>
-//                       {user.role !== 'admin' && (
+//                       {user?.role !== 'admin' && (
 //                         <button
 //                           onClick={() => handlePromote(user._id || user.id)}
 //                           style={{
@@ -216,7 +216,7 @@
 //                           ⬆️ Make Admin
 //                         </button>
 //                       )}
-//                       {user.role === 'admin' && (
+//                       {user?.role === 'admin' && (
 //                         <span style={{ 
 //                           color: '#e74c3c', 
 //                           fontSize: '12px', 
@@ -386,13 +386,13 @@ const AdminUsers = () => {
           </div>
           <div style={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', color: 'white', padding: '20px', borderRadius: '12px', textAlign: 'center' }}>
             <div style={{ fontSize: '32px', fontWeight: 'bold' }}>
-              {users.filter(u => u.role === 'admin').length}
+              {users.filter(u => u?.role === 'admin').length}
             </div>
             <div>Admin Users</div>
           </div>
           <div style={{ background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', color: 'white', padding: '20px', borderRadius: '12px', textAlign: 'center' }}>
             <div style={{ fontSize: '32px', fontWeight: 'bold' }}>
-              {users.filter(u => u.role === 'user').length}
+              {users.filter(u => u?.role === 'user').length}
             </div>
             <div>Regular Users</div>
           </div>
@@ -493,7 +493,7 @@ const AdminUsers = () => {
                           width: '44px', 
                           height: '44px', 
                           borderRadius: '50%', 
-                          background: user.role === 'admin' ? '#e74c3c' : '#2ecc71',
+                          background: user?.role === 'admin' ? '#e74c3c' : '#2ecc71',
                           color: 'white',
                           display: 'flex',
                           alignItems: 'center',
@@ -526,21 +526,21 @@ const AdminUsers = () => {
                           borderRadius: '20px',
                           fontSize: '12px',
                           fontWeight: 'bold',
-                          background: user.role === 'admin' ? '#e74c3c' : '#2ecc71',
+                          background: user?.role === 'admin' ? '#e74c3c' : '#2ecc71',
                           color: 'white',
                           display: 'inline-block',
                           minWidth: '80px',
                           textAlign: 'center'
                         }}
                       >
-                        {user.role ? user.role.toUpperCase() : 'USER'}
+                        {user?.role ? user?.role.toUpperCase() : 'USER'}
                       </span>
                     </td>
                     <td style={{ padding: '16px', fontSize: '12px', color: '#7f8c8d' }}>
                       {user.email?.includes('finance.com') || user.email?.includes('example.com') ? '🔄 Mock Data' : '💾 Registered User'}
                     </td>
                     <td style={{ padding: '16px' }}>
-                      {user.role !== 'admin' && (
+                      {user?.role !== 'admin' && (
                         <button
                           onClick={() => handlePromote(user._id || user.id)}
                           style={{
@@ -560,7 +560,7 @@ const AdminUsers = () => {
                           ⬆️ Make Admin
                         </button>
                       )}
-                      {user.role === 'admin' && (
+                      {user?.role === 'admin' && (
                         <span style={{ 
                           color: '#e74c3c', 
                           fontSize: '12px', 
